@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, Products) {
-    $scope.products = Products.all()
-    console.log('the products', $scope.products)
+    $scope.products = Products.all();
+    console.log('the products', $scope.products);
 })
 
 .controller('ChatsCtrl', function($scope, Chats, Products) {
