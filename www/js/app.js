@@ -35,6 +35,12 @@ var app = angular.module('starter', [
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state('login', {
+    url: '/login',
+    templateUrl: 'templates/Login.html',
+    controller: 'LoginCtrl'
+  })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
