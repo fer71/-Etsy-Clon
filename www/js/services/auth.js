@@ -25,12 +25,19 @@ app.factory('Auth', function(FURL, $firebaseAuth, $state) {
 				console.log('user is saving');
 				return Auth.login(user);
 			})
+		},
+
+		logout: function(){
+		   auth.$unauth();	
 		}
 	}
 	auth.$onAuth(function(authData){
 		if(authData){
+		  Auth.user=authData;	
 		console.log('the user has already logged in');
 		$state.go('tab.dash');	
+		}else {
+		  $state.go('login');	
 		}
 	})
 	return Auth;
