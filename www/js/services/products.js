@@ -9,6 +9,7 @@ app.factory('Products', function(FURL, $firebaseArray, Auth) {
       all: function(){
         return products;
       },
+      
       saveProduct: function(product, image){
         console.log('the user profile is, ', Auth.user.profile);
         var newProduct = {

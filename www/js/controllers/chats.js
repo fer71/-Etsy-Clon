@@ -1,4 +1,4 @@
-'use stirct';
+'use strict';
 
 app.controller('ChatsCtrl', function($scope, Chats, Products) {
   // With the new view caching in Ionic, Controllers are only called
